@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tamaños.css">
+    <title>MyBiblio</title>
+</head>
+
+<body> 
+    <h1>Mis Libros</h1>
+    <form id="cargaLibro" onsubmit="agregarLibro();return false">
+      <input id="nombreLibro" placeholder="Ingrese su nuevo libro" type="text" required>
+        <br />
+        <br />
+        <input id="autor" placeholder="Ingrese el autor" type="text" required>
+        <br />
+        <br />
+        <input id="Año" placeholder="Ingrese el año de publicacion" type="number" max="2025" min="1900" required>
+        <br />
+        <br />
+        <label for="categorias">Elige una categoria:</label>
+        <select id="categorias">
+            <option value="" disabled selected>-Categorias-</option>
+            <option value="terror">Terror</option>
+            <option value="drama">Drama</option>
+            <option value="ficcion">Ficción</option>
+            <option value="poesia">Poesía</option>
+            <option value="aventura">Aventura</option>
+            <option value="amor">Amor</option>
+            <option value="accion">Acción</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Agregar libro</button>
+   </form>
+    <br>
+    <br>
+    <table id="tablaLibros">
+        <thead>
+            <tr>
+                <th>N'</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Año</th>
+                <th>Categoria</th>
+                <th>Editar/Eliminar</th>
+            </tr>
+        </thead>
+    <script src="/js/biblio.js"></script>
+</body>
+
+</html>
